@@ -23,7 +23,6 @@ def save_users(users):
 # Saves a single user into the database
 # If the user is already in the database, this does nothing
 def save_user(user, cursor):
-
     # First check the user does not already exist
     existing_user = cursor.execute(
                             """SELECT * FROM users
@@ -43,7 +42,7 @@ def save_user(user, cursor):
 def save_threads(threads, current_user_id):
     cursor = conn.cursor()
 
-    for thread in threads.values():
+    for thread in threads:
         save_thread(thread, current_user_id, cursor)
 
     conn.commit()
