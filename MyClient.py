@@ -17,19 +17,10 @@ class MyClient(Client):
         cookies = self.getSession()
 
 
-        # A lot of this data came from the request I was using to work out what needed to be sent
-        # much of this probably doesn't need to be here
+        # The post data that needs to be sent with the request
         data =  {      
             "batch_name" : "MessengerGraphQLThreadFetcherRe",
             "__user": self.uid,
-            "__a": "1",
-            "__dyn": "7AgNeS-aFoGi4Q9UrEwlg9odpbGAdy8-S-C11xG3F6wAxu13wFGEa8Gm4UJi28rxuF98qDKuEjKewExail0h8S6Uhx6byoW58nxGUOEixu1tyrgcUhxGbwYUmCK5UB1G6XDwEwSxqawDDgsxm1NDx6qUpCwCGm8xC784afBxm9yUvy8lUF3bDwgUgoKcU-q48x5x6789E-bQ6e4obAumUlwPzp4h2osAAw",
-            "__req": "e",
-            "__be": "-1",
-            "__pc": "PHASED:messengerdotcom_pkg",
-            "__rev": "3577900",
-            "fb_dtsg": "AQEBd3GpaPIB:AQGDtDFO67wS",
-            "jazoest": "2658169661005171112978073665865817168116687079545511983",
             "queries": '''{"o0":{"doc_id":"1349387578499440","query_params":{"limit": ''' + str(limit) + ''' , "before": 1516250688000, "tags":["INBOX"], "includeDeliveryReceipts":true, "includeSeqID":false}}}'''
             }
 
